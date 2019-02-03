@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24-ene-2019 12:13:45 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Alumno" table="alumno" catalog="instituto" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="Id" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="Nombre" not-null="true" />
+        </property>
+        <property name="sueldo" type="float">
+            <column name="Sueldo" precision="6" not-null="true" />
+        </property>
+        <property name="registrado" type="char">
+            <column name="Registrado" length="1" not-null="true" />
+        </property>
+        <property name="fechaNac" type="date">
+            <column name="FechaNac" length="10" not-null="true" />
+        </property>
+        <property name="horaTutoria" type="time">
+            <column name="HoraTutoria" length="16" not-null="true" />
+        </property>
+        <property name="fechaRegistro" type="timestamp">
+            <column name="FechaRegistro" length="26" not-null="true" />
+        </property>
+        <property name="observaciones" type="string">
+            <column name="Observaciones" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
